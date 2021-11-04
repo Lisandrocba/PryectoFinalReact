@@ -200,7 +200,10 @@ export default function PrimarySearchAppBar() {
               aria-label="show 17 new notifications"
               color="inherit"
             >
-            <ShoppingCartOutlinedIcon/> 
+              <Badge badgeContent={1} color="error">
+              <ShoppingCartOutlinedIcon/> 
+              </Badge>
+            
 
             </IconButton>
             <IconButton
