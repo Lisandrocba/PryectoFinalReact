@@ -15,6 +15,10 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+
+
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -56,7 +60,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function NavBar() {
+export default function PrimarySearchAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -196,9 +200,8 @@ export default function NavBar() {
               aria-label="show 17 new notifications"
               color="inherit"
             >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
+            <ShoppingCartOutlinedIcon/> 
+
             </IconButton>
             <IconButton
               size="large"
@@ -231,3 +234,15 @@ export default function NavBar() {
     </Box>
   );
 }
+
+/*
+
+<Box sx={{ display: { xs: 'none', md: 'flex'} }}>
+
+<ShoppingCartOutlinedIcon
+ 
+> 
+  
+  
+</ShoppingCartOutlinedIcon>
+</Box>*/
