@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar";
 import { createTheme } from '@mui/material/styles';
 import { orange, red } from '@mui/material/colors';
 import { ThemeProvider } from "@emotion/react";
+import ItemListConteiner from "./components/ItemListConteiner"
 
 const theme = createTheme({
   palette: {
@@ -19,6 +20,7 @@ function App() {
     <ThemeProvider theme={theme}>
     <div className="App">
       <NavBar />
+      <ItemListConteiner greeting={"Producto N°1"}  />
     </div>
     </ThemeProvider>
   );
