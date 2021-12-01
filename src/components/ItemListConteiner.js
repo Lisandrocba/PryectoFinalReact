@@ -1,4 +1,3 @@
-import ItemCount from "./ItemCount";
 import React, { useState, useEffect } from 'react';
 import getProductos from "../services/handMadePromice";
 import ItemList from './ItemList'
@@ -24,7 +23,6 @@ const ItemListConteiner = ({greeting}) =>{
         <>
         <h1>Producto</h1>
         <h3>{greeting}</h3>
-        <ItemCount stock={5} initial={1}/>
         <ItemList producto={producto}/>
         </>
     )

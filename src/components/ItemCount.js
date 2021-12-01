@@ -25,6 +25,8 @@ const ItemCount = ({stock, initial}) =>{
         else{
             alert(`Se agregaron ${count} productos al carrito`);
         }
+
+        setCount(initial);
     }
 
     return(
