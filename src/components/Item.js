@@ -1,12 +1,17 @@
-const Item = (props)=>{
+import { Link } from "react-router-dom";
 
-    console.log()
+
+const Item = ({ id, name, categoria, stock })=>{
+
+    console.log("este",id)
     return(
-        <li>
-            <h2>{props.nombre}</h2>
-            <p>{props.categoria}</p>
-            <p>{props.stock}</p>
-        </li>
+        <Link to={`/item/${id}`}>
+            <li>
+                <h2>{name}</h2>
+                <p>{categoria}</p>
+                <p>{stock}</p>
+            </li>
+        </Link>
     )
 }
 

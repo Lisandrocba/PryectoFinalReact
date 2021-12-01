@@ -1,20 +1,19 @@
 import Item from './Item'
 
 const ItemList =({producto}) =>{
-    console.log("productos desde el itemList", producto)
+    
     return(
-        
-       <ul>
+        <ul>
            {producto.map((prod =>{
                return(
                    <Item 
-                   key={prod.id} 
-                   nombre = {prod.name} 
+                   id={prod.id} 
+                   name = {prod.name} 
                    categoria = {prod.categoria} 
                    stock = {prod.stock}/> 
                )
            }))}
-
+        
        </ul>
         
         

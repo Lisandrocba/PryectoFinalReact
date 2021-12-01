@@ -1,28 +1,19 @@
 import NavBar from "./components/NavBar";
-import { createTheme } from '@mui/material/styles';
-import { orange, red } from '@mui/material/colors';
-import { ThemeProvider } from "@emotion/react";
 import ItemListConteiner from "./components/ItemListConteiner"
+import { Route, Routes } from "react-router";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: red[400],
-    },
-    secondary: {
-      main: orange[500],
-    },
-  },
-});
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
     <div className="App">
       <NavBar />
-      <ItemListConteiner greeting={"Producto N°1"}  />
+      <Routes>
+        <Route path="/" element={<ItemListConteiner greeting="Producto N°1" />} />
+        <Route path="item/:id" element={<ItemDetailContainer />} />
+      </Routes>
+     
     </div>
-    </ThemeProvider>
   );
 }
 
