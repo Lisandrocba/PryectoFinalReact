@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({ id, name, categoria, stock })=>{
 
-    console.log("este",id)
+    
     return(
         <Link to={`/item/${id}`}>
             <li>
